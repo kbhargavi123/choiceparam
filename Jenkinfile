@@ -11,7 +11,7 @@ pipeline {
         stage('shell script execution') {
             steps {
                 
-                bat './param.sh $env'
+                sh './param.sh $env'
              
             }
         }
