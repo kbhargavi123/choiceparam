@@ -10,10 +10,8 @@ pipeline {
         }
         stage('shell script execution') {
             steps {
-                sh '''
-                chmod +x param.sh
-                ./param.sh $env 
-                '''
+                sh './param.sh $env' 
+                
              
             }
         }
