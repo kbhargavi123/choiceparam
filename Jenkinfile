@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('checkout scm') {
             steps {
-                git 'https://github.com/kbhargavi123/choiceparam.git'
+               git branch: 'main', url: 'https://github.com/kbhargavi123/choiceparam.git'
                 echo 'checkedout scm'
             }
         }
