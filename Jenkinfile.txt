@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout scm') {
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/kbhargavi123/choiceparam.git'
+                echo 'checkedout scm'
+            }
+        }
+        stage('shell script execution') {
+            steps {
+                
+                bat './param.sh $env'
+             
+            }
+        }
+   }
+}
+
+       
