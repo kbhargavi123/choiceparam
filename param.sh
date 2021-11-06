@@ -1,10 +1,11 @@
+#!/bin/bash
 var=$1
 echo "Variable::$var"
 if [ $var == "dev" ]
-  then
+then
  echo "dev environment selected"
-  elif [ $var == "qa" ]
-     then 
+elif [ $var == "qa" ]
+then 
   echo "qa environment selected"
 else
   echo "prod environment selected"
