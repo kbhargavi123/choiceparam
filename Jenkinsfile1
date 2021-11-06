@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout scm') {
+            steps {
+               git branch: 'main', url: 'https://github.com/kbhargavi123/choiceparam.git'
+            // checkout scm
+                echo 'checkedout scm'
+            }
+        }
+        stage('shell script execution') {
+            steps {
+               
+               def var = $environment
+               if(var == "dev"){
+               echo "dev environmen selected"
+               }
+               else if(var == "qa"){
+                   echo "qa environment selected"
+               }
+               else{
+                   echo "prod selected"
+               }
+             
+            }
+        }
+   }
+}
+
+       
