@@ -11,18 +11,21 @@ pipeline {
         }
         stage('shell script execution') {
             steps {
+
+                script{
                
-               def var = environment
-               if(var == "dev"){
-               echo "dev environmen selected"
-               }
-               else if(var == "qa"){
-                   echo "qa environment selected"
-               }
-               else{
-                   echo "prod selected"
-               }
+                    def var = environment
+                    if(var == "dev"){
+                    echo "dev environmen selected"
+                    }
+                    else if(var == "qa"){
+                        echo "qa environment selected"
+                    }
+                    else{
+                        echo "prod selected"
+                    }
              
+                }
             }
         }
    }
