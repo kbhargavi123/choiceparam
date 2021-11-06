@@ -1,8 +1,9 @@
 var=$1
-if [ "$var" == "dev" ];
+echo "Variable::$var"
+if [ $var == "dev" ]
   then
  echo "dev environment selected"
-  elif [ "$var" == "qa" ];
+  elif [ $var == "qa" ]
      then 
   echo "qa environment selected"
 else
